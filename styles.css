@@ -1,0 +1,51 @@
+body {
+    position: relative;
+    background-color: #F7F7F7;
+    font-family: sans-serif;
+    }
+        
+
+div{text-align: center; 
+    }
+
+h1{color: #FFF25A;
+    text-align: center;
+    font-size: 36px;
+    text-shadow: 2px 2px grey
+    }
+
+h2 {text-align: left;
+    padding: 25px 0 0 80px;
+    cursor: pointer;
+    height: 55px;
+    color: rgba(46,46,44, .9);
+    }
+
+.close {
+    background: url('assets/close.png') no-repeat;
+    background-size: 35px 35px;
+    background-position: left;
+        }
+
+.open {
+    background: url('assets/open.png') no-repeat;
+    background-size: 35px 35px;
+    background-position: left;
+   
+        }
+
+section {
+    margin: 0 50px 10px 50px;
+    padding: 15px 50px 30px 50px;
+    background-color: rgba(245,245,116, .8);
+    text-align: center;
+    border-radius: 25px;
+}
+
+.answer{
+    color: rgba(46,46,44, .9);
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 17px;
+    }

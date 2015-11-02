@@ -3,6 +3,8 @@
 
 <head>
     <title>FAQ</title>
+     <link rel="stylesheet" href="styles.css" type="text/css">
+<!--
     <style type="text/css">
         body {
             position: relative;
@@ -29,11 +31,31 @@
             background-color: #999;
         }
     </style>
+-->
     <script type="text/javascript" src="jquery-1.11.1.js"></script>
     <script type="text/javascript">
         ////could use toggle which is show/hide but that would not allow for the graphics
-        $(document).ready(function () {
-          
+            $(document).ready(function() {
+            $(".answer").hide();  
+             $(".main h2").click(function(){
+//                $(this).next('.answer').slideDown(); //to see if visible
+                 var $currentAnswer = $(this).next('.answer');
+                 if($currentAnswer.is(':hidden')){
+
+                     $('.answer').slideUp();
+                     $(this).removeClass('close');
+                     $(this).addClass('open');
+                     
+                     $currentAnswer.slideDown();
+                     $(this).removeClass('open');
+                     $(this).addClass('close');  
+                 }else{
+                     $currentAnswer.slideUp();
+                     $(this).removeClass('close');
+                     $(this).addClass('open'); 
+                 }
+         
+            });
         }); // end of ready()
     </script>
 </head>
@@ -42,24 +64,24 @@
     <h1>FAQ</h1>
     <div class="main">
         <section>
-            <h2 class="open">First question.</h2>
+            <h2 class="open">How often to water my plant?</h2>
+            <p class="answer">Providing your plant consistant water can create less stress for them but that doesn't nessarily mean to water them everyday. Each plant is unique and with it's own conditions in which it best thrives. Some plants prefer drying out a bit between waterings while some like their roots kept moist. Be sure to get to know your plant so you can properly care for them.</p>
+        </section>
+        <section>
+            <h2 class="open">What to do with house plant pests?</h2>
+            <p class="answer">You should always check the plant before you buy them. Pests can quickly spread to other house platns if not taken care of. If your plant has pests, it is best to isolate the plant as soon as possible for treatment. You can find pest sprays at your local garden store.</p>
+        </section>
+        <section>
+            <h2 class="open">Why is my house plant not growing?</h2>
             <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
         <section>
-            <h2 class="open">Second question.</h2>
-            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2 class="open">Is my house plant sick?</h2>
+            <p class="answer">Plants in can be very sensitive. The slightest imbalance or soil, light, temperature, and watering can make a plant sick. Some things to look for are the leaves and soil. Is there white bits or moss growing on top of the soil? This usually is from over watering. Are the leaves brown or falling off? This is usually from the plant not receiving enough nutrients. If leaves are curling up , it could be a pest-caused sickness. Are there spots on the leaves? That is an indication the plant is getting too much sun. If the spots look black, that usually means a fungus infection.</p>
         </section>
         <section>
-            <h2 class="open">Third question.</h2>
-            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-        <section>
-            <h2 class="open">Fourth question.</h2>
-            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </section>
-        <section>
-            <h2 class="open">Fifth question.</h2>
-            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h2 class="open">Is my house plant dead or alive?</h2>
+            <p class="answer">>Telling whether a plant is truly dead or alive can be a difficult task. There are subtle clues you can check for to help you make that judgement call. Has your plant lost all of it's leaves or all the leaves have gone brown? If yes, check and see if the stem of your plant is mushy or brittle. Also check the roots of the plant as and if they too are mushy and brittle then it is most likely your plant is dead.</p>
         </section>
     </div>
 </body>
